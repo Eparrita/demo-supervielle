@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Montserrat:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    font-size: 16px;
+    font-family: 'Heebo', sans-serif;
+    color: #595959;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-family: 1.125em;
+}
+
+h3 {
+    font-family: 1.0625em;
+}
+
+li {
+    list-style: none;
+}
+
+strong {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+}
+
+#root {
+    height: 100%;
+}
+
+.container-fluid {
+    width: 100%;
+    min-height: 100%;
+}
+
+.container {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    padding: 0 2.5%;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.fade {
+    animation: fade 1s forwards;
+    opacity: 0;
+    transition: 2s;
+    visibility: visible !important;
+}
+
+.values {
+    position: relative;
+    background: url('../images/background-cotizaciones.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, .50);
+        z-index: -1;
+
+    }
+}
+
+.values__content {
+    width: 60%;
+    position: relative;
+    top: 0;
+    left: 40%;
+    display: block;
+    animation: fadeup 1s 1s forwards;
+    transition: 2s;
+    opacity: 1;
+    visibility: hidden;
+
+    & ul {
+        overflow: hidden;
+
+        li {
+            position: relative;
+            text-align: center;
+            margin-bottom: 5%;
+            transition: 2s;
+            opacity: 0;
+
+            &:first-child {
+                margin-top: 4%;
+            }
+
+            &:nth-of-type(1){
+                animation: fade 1s 1.5s forwards;
+            }
+            &:nth-of-type(2){
+                animation: fade 1s 1.8s forwards;
+            }&:nth-of-type(3){
+                animation: fade 1s 2.1s forwards;
+            }
+        }
+    }
+}
+
+.values__content_card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.card-3 {
+    width: calc(33.33333% - 1em) !important;
+    margin: .5em;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(to bottom, #ee2527 0%, #771314 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee2527', endColorstr='#771314', GradientType=0);
+    color: #fff;
+    border-radius: .5em .5em 0 0;
+
+    h3 {
+        padding: 2% 0;
+        text-transform: uppercase;
+    }
+}
+
+.card_body {
+    background: inherit;
+    position: relative;
+    padding: 5%;
+    border-radius: 0 0 .5em .5em;
+    box-shadow: 0px 0.1875em 0.0625em -0.125em rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        width: 120%;
+        min-height: 120%;
+        position: absolute;
+        top: -1.5625em;
+        left: -1.5625em;
+        right: 0;
+        bottom: 0;
+        background: inherit;
+        box-shadow: inset 0 0 0 12.5em rgba(255, 255, 255, 0.5);
+        filter: blur(1.875em);
+        z-index: -1;
+    }
+
+    p {
+        padding-bottom: 2%;
+    }
+
+    .left {
+        text-align: left !important;
+    }
+
+    .right {
+        text-align: right !important;
+    }
+}
+
+/*keyframes*/
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeup {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+        visibility: visible;
+    }
+}
