@@ -6,4 +6,4 @@
 - Se requiere que el front consuma https://www.supervielle.com.ar/api/cotizaciones y lo muestre en pantalla, de una manera atractiva y moderna.
 - Se debe agregar al menos 1 banner encima de la tabla o en los costados, para enriquecer aún más la pizarra de manera comercial.
  ## ¿Cómo ver el Test?
-Para ver de manera local por favor abra con el explorador que gusta el archivo index.html en tal caso de no lograrlo abrir también puede verlo en la siguiente dirección https://eparrita.github.io/demo-supervielle
+Para ver de manera local por favor abra la carpeta build y con el explorador que use abra el index.html en tal caso de no lograrlo abrir también puede verlo en la siguiente dirección https://eparrita.github.io/demo-supervielle
